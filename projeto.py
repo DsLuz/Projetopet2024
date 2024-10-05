@@ -4,18 +4,13 @@ times = ['Flamengo', 'Vasco', 'Fluminense', 'Botafogo', 'Atlético-mg', 'Bahia']
 saldo = 0
 cupom = ('pet2024')
 
-cupom_inserido = str(input('Digite o cupom:'))
-if cupom_inserido == cupom:
-    saldo += 100
-    print('Parabéns R$ 100,00 foi depositado em sua conta')
-else:
-    print("Cupom inválido/n Digite novamente:")
+
      
 while True:
-    print('Bem-vindo ao Petano \n insira um comando numérico de 1 a 4')
+    print('Bem-vindo ao Petano \n insira um comando numérico de 1 a 6')
     comando = int(input('Comando: '))
     
-    if comando not in range (1,5): # validar o comando
+    if comando not in range (1,7): # validar o comando
         print('Comando inválido \n Digite outro comando.')
 
     else:
@@ -36,6 +31,18 @@ while True:
         elif comando == 3:
             print (f'Saldo atual:R${saldo}')
 
+        elif comando == 4:
+            cupom_inserido = str(input('Digite o cupom:'))
+            if cupom_inserido == cupom:
+                saldo += 100
+                print('Parabéns R$ 100,00 foi depositado em sua conta')
+            else:
+                print("Cupom inválido")
+        
+        elif comando == 5:
+            confrontos = random.shuffle(confrontos)
+
+            
 
 
         
